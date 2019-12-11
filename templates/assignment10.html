@@ -1,0 +1,36 @@
+<DOCTYPE html>
+
+	<head>
+		<title> Assignment10 </title>
+	</head>
+
+	<body>
+		<form action="/number.html" method="GET" id="nameForm">
+		
+		<p1> First name: </p1> 	<br>
+		<input type="text" name="firstN" id="firstN" value="Rylan"> 	<br>
+		<p2> Last name: </p2> 	<br>
+		<input type="text" name="lastN" id="lastN" value="McAlister">		<br>
+		<input type="button" value="Submit" onclick="check()"> <br>
+		<p3 id="error"></p3>
+		
+		</form>
+	</body>
+
+
+	<script>
+		function check(){
+			var first = document.getElementById("firstN").value
+			var last = document.getElementById("lastN").value
+			if(first == "" || last == ""){
+				document.getElementById("error").innerHTML = "Please complete the form";
+			} else {
+				document.getElementById("error").innerHTML = "";
+				document.getElementById("nameForm").submit();
+			}
+		}
+
+	</script>
+
+
+</html>

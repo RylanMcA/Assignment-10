@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+	<title> Guess the number! </title>
+
+	<body>
+
+		<p1> You guessed wrong!</p1><br>
+		<p4>  Your old guess was {{uN}} </p4>
+		<br> <br>
+		<p2> Guess the number! </p2>
+		<form method="post" id="numForm">
+		<input type="text" id="user" name="user">
+		<input type="text" id="randNum" name="randNum" value={{rand}}><br>
+		<input type="submit" value="Sumbit guess"> <br>
+		</form>
+		<p3 id="hide"></p3>
+		
+	</body>
+
+	<script>
+		function check(){
+			var user = document.getElementById("user").value
+			var randNum = document.getElementById("randNum").value
+			if (user === randNum){
+				document.getElementById("numForm").submit();
+			} else {
+				document.getElementById("p3").innerHTML = "You guessed wrong"
+			}
+		
+		}
+
+	</script>
+
+
+</html>
